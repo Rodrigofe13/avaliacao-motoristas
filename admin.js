@@ -1,11 +1,19 @@
-// admin.js
+// admin.js - VERSÃO FINAL CORRIGIDA
 
 let chartInstance;
 
 function login() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
     const loginError = document.getElementById('loginError');
+
+    if (!emailInput || !passwordInput) {
+        loginError.innerText = "Erro interno: campos de login não encontrados.";
+        return;
+    }
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
     if (email === "rodrigocomercial@britauniao.com.br" && password === "Sosifordemoto1*") {
         document.getElementById('loginDiv').style.display = "none";
@@ -37,7 +45,7 @@ function loadChart(selectedMotorista = '', startMonth = '', endMonth = '') {
     if (startMonth && endMonth) {
         const start = new Date(startMonth + "-01");
         const end = new Date(endMonth + "-01");
-        end.setMonth(end.getMonth() + 1); // incluir o mês final completo
+        end.setMonth(end.getMonth() + 1); // incluir mês final
 
         filteredData = filteredData.filter(d => {
             const [day, month, year] = d.data.split('/');
