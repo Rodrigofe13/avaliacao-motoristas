@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><script defer src="admin.js"></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administração - Brita União</title>
@@ -13,8 +13,11 @@
     <div id="loginDiv">
       <img src="img/logo.svg" alt="Logo Brita União" style="width: 200px; margin-bottom: 20px;">
       <h1>Login Administrativo</h1>
+
+      <!-- Campos corretos de login -->
       <input type="email" id="email" placeholder="E-mail" required><br>
       <input type="password" id="password" placeholder="Senha" required><br>
+
       <button onclick="login()" class="btn-primary">Entrar</button>
       <div id="loginError" style="color: red; margin-top: 10px;"></div>
     </div>
