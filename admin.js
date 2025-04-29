@@ -1,4 +1,4 @@
-// admin.js - VERSÃO FINAL CORRIGIDA
+// admin.js corrigido e validado
 
 let chartInstance;
 
@@ -54,7 +54,7 @@ function loadChart(selectedMotorista = '', startMonth = '', endMonth = '') {
         });
     }
 
-    const labels = filteredData.map(d => \`\${d.data} (\${d.motorista})\`);
+    const labels = filteredData.map(d => `${d.data} (${d.motorista})`);
     const notas = filteredData.map(d => d.notaFinal);
 
     if (chartInstance) {
@@ -131,7 +131,7 @@ function exportCSV() {
     let csvContent = "data:text/csv;charset=utf-8,Vendedor,Motorista,Data,Nota Final (%)\n";
 
     filteredData.forEach(row => {
-        csvContent += \`\${row.vendedor},\${row.motorista},\${row.data},\${row.notaFinal}\n\`;
+        csvContent += `${row.vendedor},${row.motorista},${row.data},${row.notaFinal}\n`;
     });
 
     const encodedUri = encodeURI(csvContent);
