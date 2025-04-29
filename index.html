@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Motoristas - Brita União</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Avaliação de Motoristas</h1>
+    <form id="evaluationForm">
+      <div class="form-group">
+        <label for="vendedor">Selecione Seu Nome (Vendedor):</label>
+        <select id="vendedor" onchange="filterMotoristas()" required>
+          <option value="">-- Selecione --</option>
+          <option>Jane</option>
+          <option>Maira</option>
+          <option>Maria Alice</option>
+          <option>Rodrigo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="motorista">Selecione o Motorista:</label>
+        <select id="motorista" required>
+          <option value="">-- Escolha um Vendedor Primeiro --</option>
+        </select>
+      </div>
+
+      <div id="questions"></div>
+
+      <button type="button" onclick="calculateScore()" class="btn-primary">Calcular Nota</button>
+      <button type="button" onclick="saveResult()" class="btn-secondary">Enviar Resultado</button>
+      <button type="reset" class="btn-reset" onclick="resetForm()">Limpar Questionário</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="admin.html" class="btn-primary" style="text-decoration: none; padding: 12px 20px; display: inline-block; border-radius: 30px;">Área Administrativa</a>
+    </div>
+
+    <div id="result"></div>
+  </div>
+</body>
+</html>

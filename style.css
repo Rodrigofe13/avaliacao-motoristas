@@ -1,0 +1,77 @@
+/* style.css */
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #083358;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #083358;
+    font-weight: bold;
+}
+
+select, input, .question-select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #083358;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #083358;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: #FDB813;
+    color: #083358;
+}
+
+.btn-reset {
+    background-color: #d9534f;
+    color: #FFFFFF;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #083358;
+    font-weight: bold;
+    text-align: center;
+}
